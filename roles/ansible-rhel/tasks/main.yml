@@ -20,7 +20,7 @@
     gpgkey: https://www.centos.org/keys/RPM-GPG-KEY-CentOS-Official
   when:
     - ansible_distribution == 'RedHat'
-    - ansible_distribution_major_version|int == 7
+    - ansible_distribution_major_version|int == 8
 
 
 - name: CentOS 8 | fix repos
@@ -31,15 +31,16 @@
     - ansible_distribution_release == 'NA' #ensures not to execute on CentOS 8 Stream
   tags: fixrepos
 
-
-- name: Install git and curl
+- name: Install git, curl and python3
   become: true
   ansible.builtin.yum:
     name:
       - git
       - curl
+      - python3
     state: present
   when: ansible_os_family == 'RedHat'
+
 
   # https://asdf-vm.com/guide/getting-started.html#official-download
 - name: ASDF | install from git
@@ -66,10 +67,19 @@
 - name: ASDF | add plugin ansible-base
   changed_when: false
   ansible.builtin.shell: "asdf plugin add ansible-base || true"
+  register: asdf_plugin
+
+- debug:
+    msg: "{{ asdf_plugin.stdout_lines }}"
 
 - name: ASDF | install ansible-base
   changed_when: false
   ansible.builtin.shell: "asdf install ansible-base || true"
+  register: asdf_install
+
+- debug:
+    msg: "{{ asdf_install.stdout_lines }}"
+
 
 - name: ASDF | test ansible
   ansible.builtin.shell: "ansible --version"
