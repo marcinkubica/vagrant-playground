@@ -1,0 +1,27 @@
+all:
+  vars:
+    ansible_user: vagrant
+    ansible_host: 127.0.0.1
+  hosts:
+    rocky8:
+      ansible_ssh_private_key_file: "./.vagrant/machines/rocky8/virtualbox/private_key"
+      ansible_port: 60210
+    centos7:
+      ansible_ssh_private_key_file: "./.vagrant/machines/centos7/virtualbox/private_key"
+      ansible_port: 60211
+    centos8:
+      ansible_ssh_private_key_file: "./.vagrant/machines/centos8/virtualbox/private_key"
+      ansible_port: 60212
+    centosstream8:
+      ansible_ssh_private_key_file: "./.vagrant/machines/centosstream8/virtualbox/private_key"
+      ansible_port: 60213
+    rhel7:
+      ansible_ssh_private_key_file: "./.vagrant/machines/rhel7/virtualbox/private_key"
+      ansible_port: 60214
+    rhel8:
+      ansible_ssh_private_key_file: "./.vagrant/machines/rhel8/virtualbox/private_key"
+      ansible_port: 60215
+
+
+
+
