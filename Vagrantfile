@@ -3,13 +3,13 @@
 
 # https://gist.github.com/roblayton/c629683ca74658412487
 vms = {
-    "rocky8"          => { :ip => "192.168.0.10", :vmbox => "generic/rocky8",  :cpus => 1, :mem => 1024, :ssh_port => 50210 },
-    "centos7"         => { :ip => "192.168.0.11", :vmbox => "centos/7",        :cpus => 1, :mem => 1024, :ssh_port => 50211 },
-    "centos8"         => { :ip => "192.168.0.12", :vmbox => "centos/8",        :cpus => 1, :mem => 1024, :ssh_port => 50212 },
-    "centosstream8"   => { :ip => "192.168.0.13", :vmbox => "centos/stream8",  :cpus => 1, :mem => 1024, :ssh_port => 50213 },
-    "rhel7"           => { :ip => "192.168.0.14", :vmbox => "generic/rhel7",   :cpus => 1, :mem => 1024, :ssh_port => 50214 },
-    "rhel8"           => { :ip => "192.168.0.15", :vmbox => "generic/rhel8",   :cpus => 1, :mem => 1024, :ssh_port => 50215 },
-
+    "rocky8"          => { :ip => "192.168.0.10", :vmbox => "generic/rocky8",     :cpus => 1, :mem => 1024, :ssh_port => 50210 },
+    "centos7"         => { :ip => "192.168.0.11", :vmbox => "centos/7",           :cpus => 1, :mem => 1024, :ssh_port => 50211 },
+    "centos8"         => { :ip => "192.168.0.12", :vmbox => "centos/8",           :cpus => 1, :mem => 1024, :ssh_port => 50212 },
+    "centosstream8"   => { :ip => "192.168.0.13", :vmbox => "centos/stream8",     :cpus => 1, :mem => 1024, :ssh_port => 50213 },
+    "rhel7"           => { :ip => "192.168.0.14", :vmbox => "generic/rhel7",      :cpus => 1, :mem => 1024, :ssh_port => 50214 },
+    "rhel8"           => { :ip => "192.168.0.15", :vmbox => "generic/rhel8",      :cpus => 1, :mem => 1024, :ssh_port => 50215 },
+    "almalinux8"      => { :ip => "192.168.0.16", :vmbox => "almalinux/8",        :cpus => 1, :mem => 1024, :ssh_port => 50216 },
   }
 
   Vagrant.configure("2") do |config|

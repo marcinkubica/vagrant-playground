@@ -21,6 +21,9 @@ all:
     rhel8:
       ansible_ssh_private_key_file: "./.vagrant/machines/rhel8/virtualbox/private_key"
       ansible_port: 50215
+    almalinux8:
+      ansible_ssh_private_key_file: "./.vagrant/machines/almalinux8/virtualbox/private_key"
+      ansible_port: 50216
 
 
 

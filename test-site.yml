@@ -2,5 +2,5 @@
 - name: Let's play
   hosts: all
   roles:
-    - role: ansible-rhel
-      tags: ansible-rhel
+    - role: ansible-asdf
+      tags: ansible-asdf
